@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="quanlythuvien.master.cs" Inherits="ontapkiemtra2.quanlythuvien" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="container">
+                <div id="header">
+                    <h3>QUẢN LÝ THƯ VIỆN SÁCH</h3>
+                </div>
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="bangsach.aspx">Bảng sách</a></li>
+                            <li><a href="themsach.aspx">Thêm sách</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="contentt">
+                    <aside>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                <asp:Timer ID="Timer1" Interval="1000" runat="server" OnTick="Timer1_Tick"></asp:Timer>
+                                <asp:Image ID="img" ImageUrl="xe/1.jpg" Width="200" Height="150" runat="server"/>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </aside>
+                    <section style="text-align:center">
+                        <asp:ContentPlaceHolder ID="noidung" runat="server"/>
+                    </section>
+                </div>
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>
